@@ -1,9 +1,13 @@
 {
     "cSpell.words": [
         "heroicons",
+        "millis",
         "Nextauth",
         "signin",
         "spotifyclone",
         "tailwindcss"
-    ]
+    ],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
 }
