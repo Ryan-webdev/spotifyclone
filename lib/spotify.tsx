@@ -20,13 +20,17 @@ const params = {
     scope: scopes,
 }
 
+const redirectUri = process.env.NEXTAUTH_URL;
+
 const queryParamString = new URLSearchParams(params);
 
 const LOGIN_URL = `https://accounts.spotify.com/authorize?${queryParamString.toString()}`;
 
 const spotifyApi = new SpotifyWebApi({
+    redirectUri: redirectUri,
     clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
     clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+    
 });
 
 export default spotifyApi;
